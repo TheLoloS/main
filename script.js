@@ -14,7 +14,7 @@ image1.addEventListener('load', () => {
     canvas.height = 200;
     ctx.drawImage(image1, 0, 0, canvas.width, canvas.height);
     let particlesArray = [];
-    const numberOfParticles = 5000;
+    const numberOfParticles = 2000;
 
     const pixels = ctx.getImageData(0, 0, canvas.width, canvas.height);
 c(pixels)
@@ -49,7 +49,7 @@ c(pixels)
             this.x = Math.random() * canvas.width;
             this.y = 0;
             this.speed = 0;
-            this.velocity = Math.random() * .5;
+            this.velocity = Math.random() * 1.5;
             this.size = Math.random() * 1.5 + 1;
             this.position1 = Math.floor(this.y);
             this.position2 = Math.floor(this.x);
@@ -83,7 +83,7 @@ c(pixels)
     init();
 
     function animate() {
-        ctx.drawImage(image1, 0, 0, canvas.width, canvas.height);
+        // ctx.drawImage(image1, 0, 0, canvas.width, canvas.height);
         ctx.globalAlpha = 0.5;
         ctx.fillStyle = 'rgb(0,0,0)';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
