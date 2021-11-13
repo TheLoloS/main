@@ -2,7 +2,7 @@ const c = console.log;
 
 
 const image1 = new Image();
-image1.src = 'img6.png';
+image1.src = 'img7.png';
 
 
 
