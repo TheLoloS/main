@@ -14,7 +14,7 @@ image1.addEventListener('load', () => {
     canvas.height = 300;
     ctx.drawImage(image1, 0, 0, canvas.width, canvas.height);
     let particlesArray = [];
-    const numberOfParticles = 10000;
+    const numberOfParticles = 4000;
 
     const pixels = ctx.getImageData(0, 0, canvas.width, canvas.height);
     ctx.clearRect(0, 0, canvas.width, canvas.height)
