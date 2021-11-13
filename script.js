@@ -17,6 +17,7 @@ image1.addEventListener('load', () => {
     const numberOfParticles = 2000;
 
     const pixels = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
 c(pixels)
     let mappedImage = [];
     for (let y = 0; y < canvas.height; y++) {
