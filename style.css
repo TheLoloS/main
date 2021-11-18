@@ -1,13 +1,106 @@
+:root {
+    --glowny: #202124;
+}
+
+@keyframes bounsing {
+    0% {
+        transform: rotate(0deg) translateY(0vh);
+    }
+    50% {
+        transform: rotate(0deg) translateY(-2vh);
+    }
+    100% {
+        transform: rotate(0deg) translateY(0vh);
+    }
+}
+
+@keyframes bounsingRevert {
+    0% {
+        transform: rotate(0deg) translateY(0vh);
+    }
+    50% {
+        transform: rotate(0deg) translateY(2vh);
+    }
+    100% {
+        transform: rotate(0deg) translateY(0vh);
+    }
+}
+
+@keyframes moveOn {
+    0% {
+        transform: translateY(40vh) rotate(120deg);
+    }
+    50% {
+        transform: translateY(25vh) rotate(-240deg);
+    }
+    100% {
+        transform: translateY(0vh) rotate(360deg);
+    }
+}
+
+@keyframes moveOnRevert {
+    0% {
+        transform: translateY(-40vh) rotate(120deg);
+    }
+    50% {
+        transform: translateY(-25vh) rotate(-240deg);
+    }
+    100% {
+        transform: translateY(0vh) rotate(360deg);
+    }
+}
+
+@keyframes hide {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 body {
-  background-color: black;
+    background-color: var(--glowny);
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.thsText {
+    background-color: #fff;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-content: center;
+    color: #202124;
+    align-items: center;
+    justify-content: center;
+    animation: hide 1.5s 1.5s forwards;
+}
+
+.thsText>p {
+    font-family: fangsong;
+    font-size: 10vw;
+}
+
+.thsText>p:nth-of-type(1) {
+    animation: moveOn 1.5s ease-in-out 0s, moveOnRevert 1.5s ease-in-out 1.5s reverse, hide 1.5s 1.5s forwards;
+}
+
+.thsText>p:nth-of-type(2) {
+    animation: hide 1.5s 1.5s forwards;
+}
+
+.thsText>p:nth-of-type(3) {
+    animation: moveOnRevert 1.5s ease-in-out 0s, moveOn 1.5s ease-in-out 1.5s reverse, hide 1.5s 1.5s forwards;
 }
 
 #canvas1 {
-  border: 3px solid white;
-  top: 50%;
-  left: 50%;
-  position: absolute;
-  width: 349px;
-  height: 714px;
-  transform: translate(-50%, -50%) scale(1.5);
+    border: 3px solid white;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    width: 349px;
+    height: 714px;
+    transform: translate(-50%, -50%) scale(1.5);
 }

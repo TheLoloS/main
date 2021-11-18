@@ -1,17 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="author" content="Piotr Sałaga">
+    <title>Thsx - portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="mask-icon" href="smok3.svg" color="black">
+    <link rel="icon" type="image/svg+xml" href="smok3.svg">
+
 </head>
 
 <body>
-    <canvas id="canvas1"></canvas>
-    <script src="script.js"></script>
+    <div class="thsText" id="">
+        <p>T</p>
+        <p>H</p>
+        <p>S</p>
+    </div>
+
+    <script>
+        // function loadingContentStatus() 
+        //     window.addEventListener('DOMContentLoaded', (event) => {
+
+        //     });
+        // }
+        // console.log(loadingContentStatus());
+
+        function LoadingScreen(run, time) {
+            setTimeout(() => {
+                const animation = document.querySelectorAll(".thsText > p");
+                [...animation].forEach(element => {
+                    element.style.animationPlayState = run;
+                });
+            }, time);
+        }
+
+        function startLoadingScreen() {
+            console.log("załadowałem")
+            const animated = document.querySelector(".thsText");
+            const animation = document.querySelectorAll(".thsText > p");
+            animated.style.animation = 'none';
+            [...animation].forEach(element => {
+                element.style.animation = 'none';
+            });
+            setTimeout(() => {
+                animated.style.animation = '';
+                [...animation].forEach(element => {
+                    element.style.animation = '';
+                });
+            }, 0);
+        }
+
+        const animated = document.querySelector(".thsText > p:nth-child(2)");
+        animated.addEventListener('animationend', () => {
+            let a = document.querySelector(".thsText");
+            // a.style.display = "none";
+        });
+    </script>
+    <!-- <canvas id="canvas1"></canvas>
+    <script src="script.js"></script> -->
+
 </body>
 
 </html>
