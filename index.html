@@ -12,14 +12,21 @@
   </head>
 
   <body>
-    <a href="https://thelolos.github.io/jedrzejpanekofficial/"> 1 projekt</a>
-    <a href="https://thelolos.github.io/2048_Game/"> 2 projekt</a>
+    <!-- <canvas id="canvas1"></canvas>
+    <script src="script.js"></script> -->
     <div class="thsText" id="">
       <p>T</p>
       <p>H</p>
       <p>S</p>
     </div>
-
+    <div class="container">
+      <a href="https://thelolos.github.io/jedrzejpanekofficial/"
+        ><img src="jedrzejpanek.png" alt=""
+      /></a>
+      <a href="https://thelolos.github.io/2048_Game/"
+        ><img src="2048.png" alt=""
+      /></a>
+    </div>
     <script>
       // function loadingContentStatus()
       //     window.addEventListener('DOMContentLoaded', (event) => {
@@ -56,10 +63,8 @@
       const animated = document.querySelector(".thsText > p:nth-child(2)");
       animated.addEventListener("animationend", () => {
         let a = document.querySelector(".thsText");
-        // a.style.display = "none";
+        a.style.display = "none";
       });
     </script>
-    <!-- <canvas id="canvas1"></canvas>
-    <script src="script.js"></script> -->
   </body>
 </html>
